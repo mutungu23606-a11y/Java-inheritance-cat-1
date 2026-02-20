@@ -1,0 +1,27 @@
+// StudentApp.java
+import java.util.Scanner;
+
+public class StudentApp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Prompt user input
+        System.out.print("Enter Student ID: ");
+        String studentID = sc.nextLine();
+
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Course: ");
+        String course = sc.nextLine();
+
+        // Create StudentRecord object
+        StudentRecord student = new StudentRecord(studentID, name, course);
+
+        // Display student details
+        System.out.println("\nStudent Details:");
+        student.displayInfo();
+
+        sc.close();
+    }
+}
